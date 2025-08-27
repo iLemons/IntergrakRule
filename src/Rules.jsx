@@ -1,70 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { createUUID } from "./utils";
 
 const list = [
   {
-    uid: 1,
-    title: "每天有两顿饭吃青菜",
+    title: "一天有两顿饭吃青菜",
     number: 1,
     img: "/public/images/rules/vegetables.png",
   },
   {
-    uid: 2,
-    title: "每天自己穿脱衣服袜子",
+    title: "自己穿脱衣服袜子",
     number: 1,
     img: "/public/images/rules/clothes.png",
   },
   {
-    uid: 3,
-    title: "每天出门自己走路",
+    title: "出门自己走路",
     number: 1,
     img: "/public/images/rules/walk.png",
   },
   {
-    uid: 4,
     title: "10点前上床睡觉",
     number: 1,
     img: "/public/images/rules/sleep.png",
   },
   {
-    uid: 5,
     title: "连续3次洗澡不拖沓",
     number: 1,
     img: "/public/images/rules/bath.png",
   },
   {
-    uid: 6,
-    title: "每天看书20分钟",
+    title: "一天看书20分钟",
     number: 1,
     img: "/public/images/rules/read.png",
   },
   {
-    uid: 7,
-    title: "每天写一页字",
+    title: "一天写一页字",
     number: 1,
     img: "/public/images/rules/write.png",
   },
   {
-    uid: 8,
-    title: "学会打篮球",
-    number: 30,
+    title: "一天只看两级动画片",
+    number: 1,
+    img: "/public/images/rules/tv.png",
+  },
+  {
+    title: "打篮球15分钟",
+    number: 2,
     img: "/public/images/rules/basketball.png",
   },
   {
-    uid: 9,
-    title: "学会打羽毛球",
-    number: 30,
+    title: "打羽毛球15分钟",
+    number: 2,
     img: "/public/images/rules/badminton.png",
   },
   {
-    uid: 10,
-    title: "学会打乒乓球",
-    number: 30,
+    title: "打乒乓球15分钟",
+    number: 2,
     img: "/public/images/rules/pingpang.png",
   },
   {
-    uid: 11,
-    title: "学会跳绳",
-    number: 30,
+    title: "跳绳15分钟",
+    number: 2,
     img: "/public/images/rules/skip.png",
   },
 ];
@@ -126,7 +121,6 @@ const CardItem = ({ infos }) => {
                 fontSize: 26,
                 fontWeight: 700,
                 color: "#c80a50",
-                textShadow: "0px 1px 2px #fff,1px 2px 3px #fff;",
               }}
             >
               {infos.number}
@@ -139,6 +133,20 @@ const CardItem = ({ infos }) => {
 };
 
 const Rules = () => {
+  const [lists, setLists] = useState([]);
+
+  useEffect(() => {
+    const initList = () => {
+      let arr = [];
+      list.map((item) => {
+        item.uid = createUUID();
+        arr.push(item);
+      });
+      setLists(arr);
+    };
+
+    initList();
+  }, []);
   return (
     <>
       <div
@@ -152,7 +160,7 @@ const Rules = () => {
           overflow: "overlay",
         }}
       >
-        {list.map((infos) => {
+        {lists.map((infos) => {
           return <CardItem key={infos.uid} infos={infos} />;
         })}
       </div>

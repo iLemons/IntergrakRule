@@ -1,95 +1,110 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { createUUID } from "./utils";
 
 const list = [
   {
-    uid: 1,
     img: "/public/images/toys/toy1.jpg",
     number: 12,
   },
   {
-    uid: 2,
     img: "/public/images/toys/toy2.jpg",
     number: 12,
   },
   {
-    uid: 3,
     img: "/public/images/toys/toy3.jpg",
     number: 12,
   },
   {
-    uid: 4,
     img: "/public/images/toys/toy4.jpg",
     number: 10,
   },
   {
-    uid: 5,
     img: "/public/images/toys/toy5.jpg",
     number: 10,
   },
   {
-    uid: 6,
     img: "/public/images/toys/toy6.jpg",
     number: 69,
   },
   {
-    uid: 7,
     img: "/public/images/toys/toy7.jpg",
     number: 69,
   },
   {
-    uid: 8,
     img: "/public/images/toys/toy8.jpg",
     number: 69,
   },
   {
-    uid: 9,
     img: "/public/images/toys/toy9.jpg",
     number: 69,
   },
   {
-    uid: 10,
     img: "/public/images/toys/toy10.jpg",
     number: 69,
   },
   {
-    uid: 11,
     img: "/public/images/toys/toy11.jpg",
     number: 69,
   },
   {
-    uid: 12,
     img: "/public/images/toys/toy12.jpg",
     number: 75,
   },
   {
-    uid: 13,
     img: "/public/images/toys/toy13.jpg",
     number: 99,
   },
   {
-    uid: 14,
     img: "/public/images/toys/toy14.jpg",
     number: 99,
   },
   {
-    uid: 15,
     img: "/public/images/toys/toy15.jpg",
     number: 79,
   },
   {
-    uid: 16,
     img: "/public/images/toys/toy16.jpg",
     number: 99,
   },
   {
-    uid: 17,
     img: "/public/images/toys/toy17.jpg",
     number: 79,
   },
   {
-    uid: 18,
     img: "/public/images/toys/toy18.jpg",
     number: 79,
+  },
+  {
+    img: "/public/images/toys/toy19.jpg",
+    number: 9,
+  },
+  {
+    img: "/public/images/toys/toy20.jpg",
+    number: 9,
+  },
+  {
+    img: "/public/images/toys/toy21.jpg",
+    number: 8,
+  },
+  {
+    img: "/public/images/toys/toy22.jpg",
+    number: 9,
+  },
+  {
+    img: "/public/images/toys/toy23.jpg",
+    number: 9,
+  },
+  {
+    img: "/public/images/toys/toy24.jpg",
+    number: 8,
+  },
+  {
+    img: "/public/images/toys/toy25.jpg",
+    number: 7,
+  },
+  {
+    img: "/public/images/toys/toy26.jpg",
+    number: 7,
   },
 ];
 
@@ -148,7 +163,6 @@ const CardItem = ({ infos }) => {
                   fontSize: 26,
                   fontWeight: 700,
                   color: "#c80a50",
-                  textShadow: "0px 1px 2px #fff,1px 2px 3px #fff;",
                 }}
               >
                 {infos.number * 3}
@@ -162,6 +176,23 @@ const CardItem = ({ infos }) => {
 };
 
 const Toys = () => {
+  const [lists, setLists] = useState([]);
+
+  useEffect(() => {
+    const initList = () => {
+      let arr = [];
+      list
+        .sort((a, b) => a.number - b.number)
+        .map((item) => {
+          item.uid = createUUID();
+          arr.push(item);
+        });
+
+      setLists(arr);
+    };
+
+    initList();
+  }, []);
   return (
     <>
       <div
@@ -175,7 +206,7 @@ const Toys = () => {
           overflow: "overlay",
         }}
       >
-        {list.map((infos) => {
+        {lists.map((infos) => {
           return <CardItem key={infos.uid} infos={infos} />;
         })}
       </div>
