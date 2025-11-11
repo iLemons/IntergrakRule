@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://iLemons/github.io",
+  "homepage": "https://iLemons/github.io/IntergrakRule",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
