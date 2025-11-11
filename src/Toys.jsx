@@ -1,109 +1,112 @@
 import React, { useEffect, useState } from "react";
 import { createUUID } from "./utils";
 
+import toy1 from "../public/images/toys/toy1.jpg";
+import toy2 from "../public/images/toys/toy2.jpg";
+
 const list = [
   {
-    img: "/public/images/toys/toy1.jpg",
+    img: toy1,
     number: 12,
   },
   {
-    img: "/public/images/toys/toy2.jpg",
+    img: toy2,
     number: 12,
   },
   {
-    img: "/public/images/toys/toy3.jpg",
+    img: "./images/toys/toy3.jpg",
     number: 12,
   },
   {
-    img: "/public/images/toys/toy4.jpg",
+    img: "./images/toys/toy4.jpg",
     number: 10,
   },
   {
-    img: "/public/images/toys/toy5.jpg",
+    img: "./images/toys/toy5.jpg",
     number: 10,
   },
   {
-    img: "/public/images/toys/toy6.jpg",
+    img: "./images/toys/toy6.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy7.jpg",
+    img: "./images/toys/toy7.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy8.jpg",
+    img: "./images/toys/toy8.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy9.jpg",
+    img: "./images/toys/toy9.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy10.jpg",
+    img: "./images/toys/toy10.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy11.jpg",
+    img: "./images/toys/toy11.jpg",
     number: 69,
   },
   {
-    img: "/public/images/toys/toy12.jpg",
+    img: "./images/toys/toy12.jpg",
     number: 75,
   },
   {
-    img: "/public/images/toys/toy13.jpg",
+    img: "./images/toys/toy13.jpg",
     number: 99,
   },
   {
-    img: "/public/images/toys/toy14.jpg",
+    img: "./images/toys/toy14.jpg",
     number: 99,
   },
   {
-    img: "/public/images/toys/toy15.jpg",
+    img: "./images/toys/toy15.jpg",
     number: 79,
   },
   {
-    img: "/public/images/toys/toy16.jpg",
+    img: "./images/toys/toy16.jpg",
     number: 99,
   },
   {
-    img: "/public/images/toys/toy17.jpg",
+    img: "./images/toys/toy17.jpg",
     number: 79,
   },
   {
-    img: "/public/images/toys/toy18.jpg",
+    img: "./images/toys/toy18.jpg",
     number: 79,
   },
   {
-    img: "/public/images/toys/toy19.jpg",
+    img: "./images/toys/toy19.jpg",
     number: 9,
   },
   {
-    img: "/public/images/toys/toy20.jpg",
+    img: "./images/toys/toy20.jpg",
     number: 9,
   },
   {
-    img: "/public/images/toys/toy21.jpg",
+    img: "./images/toys/toy21.jpg",
     number: 8,
   },
   {
-    img: "/public/images/toys/toy22.jpg",
+    img: "./images/toys/toy22.jpg",
     number: 9,
   },
   {
-    img: "/public/images/toys/toy23.jpg",
+    img: "./images/toys/toy23.jpg",
     number: 9,
   },
   {
-    img: "/public/images/toys/toy24.jpg",
+    img: "./images/toys/toy24.jpg",
     number: 8,
   },
   {
-    img: "/public/images/toys/toy25.jpg",
+    img: "./images/toys/toy25.jpg",
     number: 7,
   },
   {
-    img: "/public/images/toys/toy26.jpg",
+    img: "./images/toys/toy26.jpg",
     number: 7,
   },
 ];
