@@ -1,113 +1,231 @@
 import React, { useEffect, useState } from "react";
 import { createUUID } from "./utils";
 
-import toy1 from "../public/images/toys/toy1.jpg";
-import toy2 from "../public/images/toys/toy2.jpg";
-
 const list = [
   {
-    img: toy1,
-    number: 12,
+    img: "./images/toys/toy1.jpg",
+    code: "./images/toys/toy1_11_code.png",
+    number: 30,
   },
   {
-    img: toy2,
-    number: 12,
+    img: "./images/toys/toy2.jpg",
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy3.jpg",
-    number: 12,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy4.jpg",
-    number: 10,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy5.jpg",
-    number: 10,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy6.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy7.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy8.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy9.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy10.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy11.jpg",
-    number: 69,
+    code: "./images/toys/toy1_11_code.png",
+    number: 45,
   },
   {
     img: "./images/toys/toy12.jpg",
-    number: 75,
+    code: "./images/toys/toy12_16_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy13.jpg",
-    number: 99,
+    code: "./images/toys/toy12_16_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy14.jpg",
-    number: 99,
+    code: "./images/toys/toy12_16_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy15.jpg",
-    number: 79,
+    code: "./images/toys/toy12_16_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy16.jpg",
-    number: 99,
+    code: "./images/toys/toy12_16_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy17.jpg",
-    number: 79,
+    code: "./images/toys/toy17_19_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy18.jpg",
-    number: 79,
+    code: "./images/toys/toy17_19_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy19.jpg",
-    number: 9,
+    code: "./images/toys/toy17_19_code.png",
+    number: 10,
   },
   {
     img: "./images/toys/toy20.jpg",
-    number: 9,
+    code: "./images/toys/toy20_23_code.png",
+    number: 12,
   },
   {
     img: "./images/toys/toy21.jpg",
-    number: 8,
+    code: "./images/toys/toy20_23_code.png",
+    number: 12,
   },
   {
     img: "./images/toys/toy22.jpg",
-    number: 9,
+    code: "./images/toys/toy20_23_code.png",
+    number: 12,
   },
   {
     img: "./images/toys/toy23.jpg",
-    number: 9,
+    code: "./images/toys/toy20_23_code.png",
+    number: 12,
   },
   {
     img: "./images/toys/toy24.jpg",
-    number: 8,
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
   },
   {
     img: "./images/toys/toy25.jpg",
-    number: 7,
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
   },
   {
     img: "./images/toys/toy26.jpg",
-    number: 7,
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
+  },
+  {
+    img: "./images/toys/toy27.jpg",
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
+  },
+  {
+    img: "./images/toys/toy28.jpg",
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
+  },
+  {
+    img: "./images/toys/toy29.jpg",
+    code: "./images/toys/toy24_29_code.png",
+    number: 11,
+  },
+  {
+    img: "./images/toys/toy30.jpg",
+    code: "./images/toys/toy30_33_code.png",
+    number: 68,
+  },
+  {
+    img: "./images/toys/toy31.jpg",
+    code: "./images/toys/toy30_33_code.png",
+    number: 19,
+  },
+  {
+    img: "./images/toys/toy32.jpg",
+    code: "./images/toys/toy30_33_code.png",
+    number: 52,
+  },
+  {
+    img: "./images/toys/toy33.jpg",
+    code: "./images/toys/toy30_33_code.png",
+    number: 52,
+  },
+  {
+    img: "./images/toys/toy34.jpg",
+    code: "./images/toys/toy34_38_code.png",
+    number: 12,
+  },
+  {
+    img: "./images/toys/toy35.jpg",
+    code: "./images/toys/toy34_38_code.png",
+    number: 13,
+  },
+  {
+    img: "./images/toys/toy36.jpg",
+    code: "./images/toys/toy34_38_code.png",
+    number: 12,
+  },
+  {
+    img: "./images/toys/toy37.jpg",
+    code: "./images/toys/toy34_38_code.png",
+    number: 15,
+  },
+  {
+    img: "./images/toys/toy38.jpg",
+    code: "./images/toys/toy34_38_code.png",
+    number: 12,
+  },
+  {
+    img: "./images/toys/toy39.jpg",
+    code: "./images/toys/toy39_40_code.png",
+    number: 27,
+  },
+  {
+    img: "./images/toys/toy40.jpg",
+    code: "./images/toys/toy39_40_code.png",
+    number: 27,
+  },
+  {
+    img: "./images/toys/toy41.jpg",
+    code: "./images/toys/toy41_45_code.png",
+    number: 12,
+  },
+  {
+    img: "./images/toys/toy42.jpg",
+    code: "./images/toys/toy41_45_code.png",
+    number: 24,
+  },
+  {
+    img: "./images/toys/toy43.jpg",
+    code: "./images/toys/toy41_45_code.png",
+    number: 10,
+  },
+  {
+    img: "./images/toys/toy44.jpg",
+    code: "./images/toys/toy41_45_code.png",
+    number: 13,
+  },
+  {
+    img: "./images/toys/toy45.jpg",
+    code: "./images/toys/toy41_45_code.png",
+    number: 12,
   },
 ];
 
@@ -119,60 +237,102 @@ const CardItem = ({ infos }) => {
           width: "100%",
           fontSize: 0,
           position: "relative",
-          borderRadius: 8,
+          borderRadius: 5,
           overflow: "hidden",
-          backgroundImage: `url(${infos.img})`,
-          backgroundSize: "112%",
-          backgroundPosition: "center",
+          boxShadow:
+            "0 1px 2px -2px rgba(0,0,0,0.16), 0 3px 6px 0 rgba(0,0,0,0.12), 0 5px 12px 4px rgba(0,0,0,0.09)",
         }}
       >
         <div
+          style={{
+            padding: 8,
+          }}
+        >
+          <img
+            style={{
+              width: "100%",
+              border: "1px solid #ddd",
+            }}
+            src={infos.img}
+            alt=""
+          />
+        </div>
+        <div
+          style={{
+            padding: 15,
+            display: "flex",
+            width: "100%",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{
+                width: 80,
+              }}
+              src={infos.code}
+              alt=""
+            />
+          </div>
+
+          <div
+            style={{
+              flex: 1,
+              position: "relative",
+              height: 100,
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                right: 0,
+                width: "40%",
+                backgroundImage: "url(./images/rules/integral.png)",
+                backgroundSize: "100%",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  height: 0,
+                  paddingTop: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "50%",
+                      top: "53%",
+                      transform: "translateX(-50%) translateY(-80%)",
+                      fontSize: 26,
+                      fontWeight: 700,
+                      color: "#c80a50",
+                    }}
+                  >
+                    {infos.number * 3}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div
           style={{
             width: "100%",
             height: 0,
             paddingTop: "137.3148%",
           }}
-        ></div>
-        <div
-          style={{
-            position: "absolute",
-            zIndex: 10,
-            bottom: "14%",
-            right: "5%",
-            width: "24%",
-            backgroundImage: "url(./images/rules/integral.png)",
-            backgroundSize: "100%",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              height: 0,
-              paddingTop: "100%",
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  left: "50%",
-                  top: "53%",
-                  transform: "translateX(-50%) translateY(-80%)",
-                  fontSize: 26,
-                  fontWeight: 700,
-                  color: "#c80a50",
-                }}
-              >
-                {infos.number * 3}
-              </div>
-            </div>
-          </div>
-        </div>
+        ></div> */}
       </div>
     </>
   );
@@ -201,17 +361,26 @@ const Toys = () => {
       <div
         style={{
           width: "100vw",
-          padding: 20,
+          padding: 15,
           display: "grid",
           columnGap: 20,
           rowGap: 20,
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1fr",
           overflow: "overlay",
         }}
       >
         {lists.map((infos) => {
           return <CardItem key={infos.uid} infos={infos} />;
         })}
+        <div
+          style={{
+            fontSize: 14,
+            color: "#666",
+            textAlign: "center",
+          }}
+        >
+          没有更多了
+        </div>
       </div>
     </>
   );
