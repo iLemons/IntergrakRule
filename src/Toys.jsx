@@ -85,17 +85,17 @@ const list = [
   {
     img: "./images/toys/toy17.jpg",
     code: "./images/toys/toy17_19_code.png",
-    number: 10,
+    number: 69,
   },
   {
     img: "./images/toys/toy18.jpg",
     code: "./images/toys/toy17_19_code.png",
-    number: 10,
+    number: 69,
   },
   {
     img: "./images/toys/toy19.jpg",
     code: "./images/toys/toy17_19_code.png",
-    number: 10,
+    number: 69,
   },
   {
     img: "./images/toys/toy20.jpg",
@@ -226,6 +226,51 @@ const list = [
     img: "./images/toys/toy45.jpg",
     code: "./images/toys/toy41_45_code.png",
     number: 12,
+  },
+  {
+    img: "./images/toys/toy46.jpg",
+    code: "./images/toys/toy46_code.png",
+    number: 34,
+  },
+  {
+    img: "./images/toys/toy47.jpg",
+    code: "./images/toys/toy47_50_code.png",
+    number: 7,
+  },
+  {
+    img: "./images/toys/toy48.jpg",
+    code: "./images/toys/toy47_50_code.png",
+    number: 7,
+  },
+  {
+    img: "./images/toys/toy49.jpg",
+    code: "./images/toys/toy47_50_code.png",
+    number: 7,
+  },
+  {
+    img: "./images/toys/toy50.jpg",
+    code: "./images/toys/toy47_50_code.png",
+    number: 7,
+  },
+  {
+    img: "./images/toys/toy51.jpg",
+    code: "./images/toys/toy51_54_code.png",
+    number: 20,
+  },
+  {
+    img: "./images/toys/toy52.jpg",
+    code: "./images/toys/toy51_54_code.png",
+    number: 19,
+  },
+  {
+    img: "./images/toys/toy53.jpg",
+    code: "./images/toys/toy51_54_code.png",
+    number: 25,
+  },
+  {
+    img: "./images/toys/toy54.jpg",
+    code: "./images/toys/toy51_54_code.png",
+    number: 21,
   },
 ];
 
